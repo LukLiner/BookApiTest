@@ -8,9 +8,12 @@ import org.springframework.boot.context.config.ConfigDataResourceNotFoundExcepti
 import java.util.List;
 
 public class BookService {
-    private final BookReposytory bookReposytory;
+    private BookReposytory bookReposytory;
     public BookService(BookReposytory bookReposytory) {
         this.bookReposytory = bookReposytory;
+    }
+
+    public BookService(){
     }
 
     public List<Book> getAllBooks() {
